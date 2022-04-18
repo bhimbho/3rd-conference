@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0-dev+20220417.9174669a7c
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Mar 31, 2022 at 11:13 PM
+-- Host: localhost
+-- Generation Time: Apr 18, 2022 at 04:19 PM
 -- Server version: 5.7.36
--- PHP Version: 7.4.26
+-- PHP Version: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,13 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `about`
 --
 
-DROP TABLE IF EXISTS `about`;
-CREATE TABLE IF NOT EXISTS `about` (
-  `about_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `about` (
+  `about_id` int(11) NOT NULL,
   `about` mediumtext NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`about_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `updated_at` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `about`
@@ -48,14 +46,12 @@ INSERT INTO `about` (`about_id`, `about`, `updated_at`) VALUES
 -- Table structure for table `administrator`
 --
 
-DROP TABLE IF EXISTS `administrator`;
-CREATE TABLE IF NOT EXISTS `administrator` (
-  `administrator_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `administrator` (
+  `administrator_id` int(11) NOT NULL,
   `admin_username` varchar(255) NOT NULL,
   `admin_password` varchar(255) NOT NULL,
-  `date_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`administrator_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `date_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `administrator`
@@ -70,13 +66,11 @@ INSERT INTO `administrator` (`administrator_id`, `admin_username`, `admin_passwo
 -- Table structure for table `call_papers`
 --
 
-DROP TABLE IF EXISTS `call_papers`;
-CREATE TABLE IF NOT EXISTS `call_papers` (
-  `call_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `call_papers` (
+  `call_id` int(11) NOT NULL,
   `call_papers` longtext NOT NULL,
-  `date_updated` date NOT NULL,
-  PRIMARY KEY (`call_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `date_updated` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `call_papers`
@@ -91,21 +85,20 @@ INSERT INTO `call_papers` (`call_id`, `call_papers`, `date_updated`) VALUES
 -- Table structure for table `conference`
 --
 
-DROP TABLE IF EXISTS `conference`;
-CREATE TABLE IF NOT EXISTS `conference` (
-  `conference_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `conference` (
+  `conference_id` int(11) NOT NULL,
   `theme` text NOT NULL,
   `sub_theme` text NOT NULL,
-  `date` varchar(100) NOT NULL,
-  PRIMARY KEY (`conference_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+  `date` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `conference`
 --
 
 INSERT INTO `conference` (`conference_id`, `theme`, `sub_theme`, `date`) VALUES
-(12, '“Revamping the Economy: The TVET Perspectives”', '1.	Fostering Youth Employment through Entrepreneurship and Skill Development in TVET for Sustainable Economic Development', '16th - 17th August, 2021');
+(12, '“Revamping the Economy: The TVET Perspectives”', '1.	Fostering Youth Employment through Entrepreneurship and Skill Development in TVET for Sustainable Economic Development', '16th - 17th August, 2021'),
+(13, '“Revamping the Economy: The TVET Perspectives”', '1.	Fostering Youth Employment through Entrepreneurship and Skill Development in TVET for Sustainable Economic Development', '16th - 17th August, 2022');
 
 -- --------------------------------------------------------
 
@@ -113,14 +106,12 @@ INSERT INTO `conference` (`conference_id`, `theme`, `sub_theme`, `date`) VALUES
 -- Table structure for table `guideline`
 --
 
-DROP TABLE IF EXISTS `guideline`;
-CREATE TABLE IF NOT EXISTS `guideline` (
-  `guideline_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `guideline` (
+  `guideline_id` int(11) NOT NULL,
   `guideline` mediumtext NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` date NOT NULL,
-  PRIMARY KEY (`guideline_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `updated_at` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guideline`
@@ -135,9 +126,8 @@ INSERT INTO `guideline` (`guideline_id`, `guideline`, `created_at`, `updated_at`
 -- Table structure for table `journal`
 --
 
-DROP TABLE IF EXISTS `journal`;
-CREATE TABLE IF NOT EXISTS `journal` (
-  `journal_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `journal` (
+  `journal_id` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
   `abstract` text NOT NULL,
   `file` varchar(200) NOT NULL,
@@ -146,17 +136,15 @@ CREATE TABLE IF NOT EXISTS `journal` (
   `email` varchar(150) NOT NULL,
   `phone` varchar(150) NOT NULL,
   `institution` varchar(255) NOT NULL,
-  `upload_date` date DEFAULT NULL,
-  PRIMARY KEY (`journal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+  `upload_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `journal`
 --
 
 INSERT INTO `journal` (`journal_id`, `title`, `abstract`, `file`, `page_no`, `authors`, `email`, `phone`, `institution`, `upload_date`) VALUES
-(1, 'AN ENHANCED AUTHENTICATION SCHEME FOR PREVENTING PHISHING ATTACKS ON WHATSAPP ACCOUNTS', 'WhatsApp has recently become the most popular among the social media platforms because of its multimedia capability to support multiple, video, audio sajkasn skajnasn jkasj as kasjklas ksajan', 'as', '1', 'Jumoke Soyemi & Mudasiru Hammed', 'asa', 'sa', 'sa', '2022-03-10'),
-(13, 'Technical Drawing in Modern Century', 'hello world', '8786471.pdf', '0', 'SOneye & Abimbola                                   \r\n                                ', '', '', 'Grams', '2022-03-31');
+(1, 'The way to live properly', 'asjaksna', '5430863.docx', '0', 'Soneye Oluwasina Abimbola                                   \r\n                                ', '', '', 'Fed Poly', '2022-04-18');
 
 -- --------------------------------------------------------
 
@@ -164,23 +152,20 @@ INSERT INTO `journal` (`journal_id`, `title`, `abstract`, `file`, `page_no`, `au
 -- Table structure for table `new_upload`
 --
 
-DROP TABLE IF EXISTS `new_upload`;
-CREATE TABLE IF NOT EXISTS `new_upload` (
-  `new_upload_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `new_upload` (
+  `new_upload_id` int(11) NOT NULL,
   `participant_id` int(11) NOT NULL,
   `file_name` varchar(255) NOT NULL,
   `view_status` enum('0','1') NOT NULL,
-  `date_upload_created` varchar(150) NOT NULL,
-  PRIMARY KEY (`new_upload_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `date_upload_created` varchar(150) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `new_upload`
 --
 
 INSERT INTO `new_upload` (`new_upload_id`, `participant_id`, `file_name`, `view_status`, `date_upload_created`) VALUES
-(1, 1, '4737251.pdf', '1', '2022-03-27'),
-(5, 15, '8786471.pdf', '0', '2022-03-31');
+(1, 3, '5430863.docx', '1', '2022-04-18');
 
 -- --------------------------------------------------------
 
@@ -188,31 +173,28 @@ INSERT INTO `new_upload` (`new_upload_id`, `participant_id`, `file_name`, `view_
 -- Table structure for table `our_team`
 --
 
-DROP TABLE IF EXISTS `our_team`;
-CREATE TABLE IF NOT EXISTS `our_team` (
-  `team_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `our_team` (
+  `team_id` int(11) NOT NULL,
   `team_name` varchar(150) NOT NULL,
   `team_pos` varchar(150) NOT NULL,
   `team_order` int(11) NOT NULL,
-  `team_pic` varchar(150) NOT NULL,
-  PRIMARY KEY (`team_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+  `team_pic` varchar(150) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `our_team`
 --
 
 INSERT INTO `our_team` (`team_id`, `team_name`, `team_pos`, `team_order`, `team_pic`) VALUES
-(3, 'Qs Okechukwu Peter Okafor', '', 2, '6958333.jpeg'),
-(4, 'Dr. Charlotte B. Iro-Idoro', '', 3, '3835387.jpg'),
-(13, 'Engr. Cletus U. Okoye', 'Chairman', 1, '9997072.jpeg'),
-(6, 'Mr Nasir Olaniyi. Ilelaboye', '', 4, '3996940.jpg'),
-(7, 'Dr. Mrs Jumoke Soyemi', '', 7, '8173246.jpg'),
-(8, 'Engr. Jide Soyemi, PhD', '', 5, '9668386.jpeg'),
-(9, 'Arc Matemi E. Olubodun', '', 6, '8802202.jpeg'),
-(10, 'Dr. Yusuf  Adebola Bako', '', 8, '2240759.jpeg'),
-(11, 'Mr. Ismail Olalekan Majeobaje', '', 9, '5274640.jpeg'),
-(12, 'Mr. Olusola Ojo MNIM', 'Secretary', 10, '4982599.jpeg');
+(4, 'Dr. Charlotte B. Iro-Idoro', 'Member', 3, '3835387.jpg'),
+(13, 'Engr. Cletus U. Okoye', 'Chairman', 1, '6349077.jpg'),
+(6, 'Nasir Olaniyi. Ilelaboye', 'Member', 4, '3996940.jpg'),
+(7, 'Dr. Mrs Jumoke Soyemi', 'Member', 7, '8173246.jpg'),
+(8, 'Engr. Jide Soyemi, PhD', 'Member', 5, '9668386.jpeg'),
+(9, 'Arc Matemi E. Olubodun', 'Member', 6, '8802202.jpeg'),
+(10, 'Dr. Yusuf  Adebola Bako', 'Member', 8, '2240759.jpeg'),
+(11, 'Majeobaje Ismail Olalekan, ACA', 'Member', 9, '7521287.jpg'),
+(12, 'Olusola Ojo MNIM', 'Secretary', 10, '4982599.jpeg');
 
 -- --------------------------------------------------------
 
@@ -220,40 +202,23 @@ INSERT INTO `our_team` (`team_id`, `team_name`, `team_pos`, `team_order`, `team_
 -- Table structure for table `participant`
 --
 
-DROP TABLE IF EXISTS `participant`;
-CREATE TABLE IF NOT EXISTS `participant` (
-  `participantid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `participant` (
+  `participantid` int(11) NOT NULL,
   `firstname` varchar(255) COLLATE utf8_bin NOT NULL,
   `lastname` varchar(150) COLLATE utf8_bin NOT NULL,
   `journal_id` int(11) NOT NULL,
   `payment_status` int(11) NOT NULL DEFAULT '0',
-  `date_created` date NOT NULL,
-  PRIMARY KEY (`participantid`),
-  KEY `firstname` (`firstname`),
-  KEY `lastname` (`lastname`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `date_created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `participant`
 --
 
 INSERT INTO `participant` (`participantid`, `firstname`, `lastname`, `journal_id`, `payment_status`, `date_created`) VALUES
-(1, 'sa', 'as', 1, 1, '2021-02-14'),
-(2, '5wprvbgooh', 'r3gxnhxwx8', 2, 0, '2022-03-31'),
-(3, '5wprvbgooh', 'r3gxnhxwx8', 3, 0, '2022-03-31'),
-(4, '5wprvbgooh', 'r3gxnhxwx8', 4, 0, '2022-03-31'),
-(5, '5wprvbgooh', 'r3gxnhxwx8', 5, 0, '2022-03-31'),
-(6, 'oluwas', 'soneye', 6, 0, '2022-03-31'),
-(7, 'iybbalbfol', '7kfg9ihqh2', 7, 0, '2022-03-31'),
-(8, 'rcfztjvbc5', '17egsih4rf', 8, 0, '2022-03-31'),
-(9, 'pgbgxnyude', 'fifkz8hijx', 9, 0, '2022-03-31'),
-(10, 'fifkz8hijx', 'pgbgxnyude', 10, 0, '2022-03-31'),
-(11, 'pgbgxnyude', 'wfqbjdu0mw', 11, 0, '2022-03-31'),
-(12, '', '', 0, 0, '2022-03-31'),
-(13, 'pgbgxnyudes', 'sa', 1, 0, '2022-03-31'),
-(14, 'piss', 'bxixtdbbl3', 12, 0, '2022-03-31'),
-(15, 'soneye', 'abimbola', 13, 0, '2022-03-31'),
-(16, 'abimbola', 'mutairu', 13, 0, '2022-03-31');
+(1, 'bashir', 'bello', 0, 1, '2022-04-16'),
+(2, 'bashir', 'bello', 0, 1, '2022-04-16'),
+(3, 'soneye', 'oluwasina abimbola', 1, 1, '2022-04-18');
 
 -- --------------------------------------------------------
 
@@ -261,17 +226,15 @@ INSERT INTO `participant` (`participantid`, `firstname`, `lastname`, `journal_id
 -- Table structure for table `registration_fee`
 --
 
-DROP TABLE IF EXISTS `registration_fee`;
-CREATE TABLE IF NOT EXISTS `registration_fee` (
-  `reg_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `registration_fee` (
+  `reg_id` int(11) NOT NULL,
   `bank` varchar(150) NOT NULL,
   `account_name` varchar(150) NOT NULL,
   `account_number` varchar(150) NOT NULL,
   `amount` int(11) NOT NULL,
   `amount_in_dollar` int(11) NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`reg_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `updated_at` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `registration_fee`
@@ -286,17 +249,15 @@ INSERT INTO `registration_fee` (`reg_id`, `bank`, `account_name`, `account_numbe
 -- Table structure for table `speakers`
 --
 
-DROP TABLE IF EXISTS `speakers`;
-CREATE TABLE IF NOT EXISTS `speakers` (
-  `speaker_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `speakers` (
+  `speaker_id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
   `institution` varchar(200) NOT NULL,
   `picture` varchar(200) NOT NULL,
   `profile` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(200) NOT NULL,
-  `speaker_order` int(11) NOT NULL,
-  PRIMARY KEY (`speaker_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+  `speaker_order` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `speakers`
@@ -314,12 +275,10 @@ INSERT INTO `speakers` (`speaker_id`, `name`, `institution`, `picture`, `profile
 -- Table structure for table `sponsors`
 --
 
-DROP TABLE IF EXISTS `sponsors`;
-CREATE TABLE IF NOT EXISTS `sponsors` (
-  `sponsor_id` int(11) NOT NULL AUTO_INCREMENT,
-  `sponsor_img` varchar(200) NOT NULL,
-  PRIMARY KEY (`sponsor_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+CREATE TABLE `sponsors` (
+  `sponsor_id` int(11) NOT NULL,
+  `sponsor_img` varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sponsors`
@@ -334,13 +293,11 @@ INSERT INTO `sponsors` (`sponsor_id`, `sponsor_img`) VALUES
 -- Table structure for table `welcome_message`
 --
 
-DROP TABLE IF EXISTS `welcome_message`;
-CREATE TABLE IF NOT EXISTS `welcome_message` (
-  `welcome_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `welcome_message` (
+  `welcome_id` int(11) NOT NULL,
   `welcome` mediumtext NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`welcome_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `updated_at` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `welcome_message`
@@ -354,14 +311,168 @@ INSERT INTO `welcome_message` (`welcome_id`, `welcome`, `updated_at`) VALUES
 --
 
 --
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`about_id`);
+
+--
+-- Indexes for table `administrator`
+--
+ALTER TABLE `administrator`
+  ADD PRIMARY KEY (`administrator_id`);
+
+--
+-- Indexes for table `call_papers`
+--
+ALTER TABLE `call_papers`
+  ADD PRIMARY KEY (`call_id`);
+
+--
+-- Indexes for table `conference`
+--
+ALTER TABLE `conference`
+  ADD PRIMARY KEY (`conference_id`);
+
+--
+-- Indexes for table `guideline`
+--
+ALTER TABLE `guideline`
+  ADD PRIMARY KEY (`guideline_id`);
+
+--
 -- Indexes for table `journal`
 --
+ALTER TABLE `journal`
+  ADD PRIMARY KEY (`journal_id`);
 ALTER TABLE `journal` ADD FULLTEXT KEY `title` (`title`,`authors`,`institution`);
+
+--
+-- Indexes for table `new_upload`
+--
+ALTER TABLE `new_upload`
+  ADD PRIMARY KEY (`new_upload_id`);
+
+--
+-- Indexes for table `our_team`
+--
+ALTER TABLE `our_team`
+  ADD PRIMARY KEY (`team_id`);
 
 --
 -- Indexes for table `participant`
 --
+ALTER TABLE `participant`
+  ADD PRIMARY KEY (`participantid`),
+  ADD KEY `firstname` (`firstname`),
+  ADD KEY `lastname` (`lastname`);
 ALTER TABLE `participant` ADD FULLTEXT KEY `firstname_2` (`firstname`,`lastname`);
+
+--
+-- Indexes for table `registration_fee`
+--
+ALTER TABLE `registration_fee`
+  ADD PRIMARY KEY (`reg_id`);
+
+--
+-- Indexes for table `speakers`
+--
+ALTER TABLE `speakers`
+  ADD PRIMARY KEY (`speaker_id`);
+
+--
+-- Indexes for table `sponsors`
+--
+ALTER TABLE `sponsors`
+  ADD PRIMARY KEY (`sponsor_id`);
+
+--
+-- Indexes for table `welcome_message`
+--
+ALTER TABLE `welcome_message`
+  ADD PRIMARY KEY (`welcome_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `about_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `administrator`
+--
+ALTER TABLE `administrator`
+  MODIFY `administrator_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `call_papers`
+--
+ALTER TABLE `call_papers`
+  MODIFY `call_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `conference`
+--
+ALTER TABLE `conference`
+  MODIFY `conference_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `guideline`
+--
+ALTER TABLE `guideline`
+  MODIFY `guideline_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `journal`
+--
+ALTER TABLE `journal`
+  MODIFY `journal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `new_upload`
+--
+ALTER TABLE `new_upload`
+  MODIFY `new_upload_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `our_team`
+--
+ALTER TABLE `our_team`
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `participant`
+--
+ALTER TABLE `participant`
+  MODIFY `participantid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `registration_fee`
+--
+ALTER TABLE `registration_fee`
+  MODIFY `reg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `speakers`
+--
+ALTER TABLE `speakers`
+  MODIFY `speaker_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `sponsors`
+--
+ALTER TABLE `sponsors`
+  MODIFY `sponsor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `welcome_message`
+--
+ALTER TABLE `welcome_message`
+  MODIFY `welcome_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
