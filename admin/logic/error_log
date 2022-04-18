@@ -1,0 +1,282 @@
+[29-Oct-2020 12:51:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`date_upload_created`) VALUES (?,?,?)' at line 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:37
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(37): PDO->prepare('INSERT INTO `ne...')
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(67): db->execute('INSERT INTO `ne...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php(17): journal->add_new_journal_upload('1', '4681776.docx')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 37
+[29-Oct-2020 13:17:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function journal::update_journal(), 1 passed in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php on line 8 and exactly 2 expected in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php:111
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php(8): journal->update_journal('1')
+#1 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 111
+[29-Oct-2020 13:18:09 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function journal::update_journal(), 1 passed in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php on line 9 and exactly 2 expected in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php:111
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php(9): journal->update_journal('1')
+#1 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 111
+[29-Oct-2020 13:18:49 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function journal::update_journal(), 1 passed in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php on line 9 and exactly 2 expected in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php:111
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php(9): journal->update_journal('1')
+#1 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 111
+[29-Oct-2020 13:24:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php:112) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update_publish_status.php on line 11
+[30-Oct-2020 10:22:23 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 8
+[30-Oct-2020 10:22:23 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 8
+[30-Oct-2020 10:22:23 UTC] PHP Warning:  include(): Failed opening '../classes/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 8
+[30-Oct-2020 10:22:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function admin_autoloader_step_two() in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 9
+[30-Oct-2020 10:24:18 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:24:18 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:24:18 UTC] PHP Warning:  include(): Failed opening '../classes/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:24:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function admin_autoloader_step_two() in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 7
+[30-Oct-2020 10:25:43 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:25:43 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:25:43 UTC] PHP Warning:  include(): Failed opening '../classes/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:25:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function admin_autoloader_step_two() in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 7
+[30-Oct-2020 10:25:58 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:25:58 UTC] PHP Warning:  include(../classes/autoload.php): failed to open stream: No such file or directory in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:25:58 UTC] PHP Warning:  include(): Failed opening '../classes/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 6
+[30-Oct-2020 10:25:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function admin_autoloader_step_two() in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 7
+[30-Oct-2020 10:26:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'institution' cannot be null in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(137): db->execute('INSERT INTO jou...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(36): journal->update_bulk('jPWbe7SDwC', 'Abstractassssss...', '5985513.pdf', 0, 'Authorsasas', NULL, 'N5utpnC7z6', '', '', NULL)
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[30-Oct-2020 10:27:08 UTC] PHP Notice:  Undefined index: institution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 14
+[30-Oct-2020 10:27:08 UTC] PHP Notice:  Undefined variable: firstname in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 34
+[30-Oct-2020 10:27:08 UTC] PHP Notice:  Undefined variable: insitution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 34
+[30-Oct-2020 10:27:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'institution' cannot be null in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(137): db->execute('INSERT INTO jou...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('jPWbe7SDwC', 'Abstractassssss...', '2285294.pdf', 0, 'Authorsasas', NULL, 'N5utpnC7z6', '', '', NULL)
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[30-Oct-2020 10:27:57 UTC] PHP Notice:  Undefined index: institution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 14
+[30-Oct-2020 10:27:57 UTC] PHP Notice:  Undefined variable: insitution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 34
+[30-Oct-2020 10:27:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'institution' cannot be null in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(137): db->execute('INSERT INTO jou...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('jPWbe7SDwC', 'Abstractassssss...', '6858403.pdf', 0, 'Authorsasas', 'o5Ved47Bqk', 'N5utpnC7z6', '', '', NULL)
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[30-Oct-2020 10:28:50 UTC] PHP Notice:  Undefined index: institution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 14
+[30-Oct-2020 10:28:50 UTC] PHP Notice:  Undefined variable: insitution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 34
+[30-Oct-2020 10:28:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'institution' cannot be null in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(137): db->execute('INSERT INTO jou...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('mLNpHmG1uD', 'Abstractasss', '5850979.pdf', 0, 'Authorssa', 'hlmLIGchrl', 'ipVnDLffEA', '', '', NULL)
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[30-Oct-2020 10:29:37 UTC] PHP Notice:  Undefined index: institution in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 14
+[30-Oct-2020 10:29:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'institution' cannot be null in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(137): db->execute('INSERT INTO jou...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('mLNpHmG1uD', 'Abstractasss', '7160917.pdf', 0, 'Authorssa', 'hlmLIGchrl', 'ipVnDLffEA', '', '', NULL)
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[30-Oct-2020 10:39:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:37
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(37): PDO->prepare('SELECT particip...')
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(142): db->execute('SELECT particip...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('FyTNx5csgz', 'Abstractassssss...', '4455252.pdf', 0, 'Authorssaas', 'sM3Us5Jq4y', '34fdR2xZPn', '', '', 'L9D9GWLQAB')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 37
+[30-Oct-2020 10:41:20 UTC] PHP Recoverable fatal error:  Object of class PDOStatement could not be converted to string in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 142
+[30-Oct-2020 10:41:50 UTC] PHP Notice:  Undefined property: stdClass::$participantid in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 144
+[30-Oct-2020 10:41:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_new_journal_upload() in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php:145
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('FyTNx5csgz', 'Abstractassssss...', '1028476.pdf', 0, 'Authorssaas', 'sM3Us5Jq4y', '34fdR2xZPn', '', '', 'L9D9GWLQAB')
+#1 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 145
+[30-Oct-2020 10:42:05 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 144
+[30-Oct-2020 10:43:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_new_journal_upload() in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php:145
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('FyTNx5csgz', 'Abstractassssss...', '4726301.pdf', 0, 'Authorssaas', 'sM3Us5Jq4y', '34fdR2xZPn', '', '', 'L9D9GWLQAB')
+#1 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php on line 145
+[30-Oct-2020 10:43:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`date_upload_created`) VALUES (?,?,?)' at line 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:37
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(37): PDO->prepare('INSERT INTO `ne...')
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(67): db->execute('INSERT INTO `ne...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(145): journal->add_new_journal_upload(92, '1299564.pdf')
+#3 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('FyTNx5csgz', 'Abstractassssss...', '1299564.pdf', 0, 'Authorssaas', 'sM3Us5Jq4y', '34fdR2xZPn', '', '', 'L9D9GWLQAB')
+#4 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 37
+[30-Oct-2020 10:46:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`date_upload_created`) VALUES (?,?,?)' at line 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:37
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(37): PDO->prepare('INSERT INTO `ne...')
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(145): db->execute('INSERT INTO `ne...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('FyTNx5csgz', 'Abstractassssss...', '2509862.pdf', 0, 'Authorssaas', 'sM3Us5Jq4y', '34fdR2xZPn', '', '', 'L9D9GWLQAB')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 37
+[30-Oct-2020 10:48:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`date_upload_created`) VALUES (?,?,?,?)' at line 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:37
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(37): PDO->prepare('INSERT INTO `ne...')
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(145): db->execute('INSERT INTO `ne...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php(34): journal->update_bulk('FyTNx5csgz', 'Abstractassssss...', '1128630.pdf', 0, 'Authorssaas', 'sM3Us5Jq4y', '34fdR2xZPn', '', '', 'L9D9GWLQAB')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 37
+[03-Nov-2020 13:35:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `ksvftpur_intl_conference`.`participant`.`journal_id` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(62): db->execute('INSERT INTO par...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_co_author.php(14): journal->add_co_author('Anthony', 'Omojaro', '')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[03-Nov-2020 13:35:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `ksvftpur_intl_conference`.`participant`.`journal_id` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(62): db->execute('INSERT INTO par...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_co_author.php(14): journal->add_co_author('Anthony', 'Omojaro', '')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[03-Nov-2020 13:39:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[03-Nov-2020 13:39:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[03-Nov-2020 18:14:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[03-Nov-2020 18:14:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[03-Nov-2020 18:14:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[03-Nov-2020 19:05:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[04-Nov-2020 19:18:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[05-Nov-2020 21:16:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[05-Nov-2020 21:50:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[06-Nov-2020 19:54:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[07-Nov-2020 18:15:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Nov-2020 18:18:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Nov-2020 18:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Nov-2020 18:18:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Nov-2020 18:23:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Nov-2020 18:24:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Nov-2020 18:24:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php:15) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 29
+[07-Nov-2020 18:25:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php:15) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 29
+[07-Nov-2020 18:26:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php:15) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 29
+[07-Nov-2020 18:27:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php:15) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 20
+[07-Nov-2020 20:53:20 UTC] PHP Notice:  Undefined index: participant_id in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php on line 9
+[07-Nov-2020 20:53:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/participant.class.php(35): db->execute('UPDATE particip...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php(9): participant->update_payment_status('')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[07-Nov-2020 20:54:08 UTC] PHP Notice:  Undefined index: participant_id in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php on line 9
+[07-Nov-2020 20:54:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/participant.class.php(35): db->execute('UPDATE `partici...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php(9): participant->update_payment_status('')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[07-Nov-2020 20:54:28 UTC] PHP Notice:  Undefined index: participant_id in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php on line 9
+[07-Nov-2020 20:54:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php:9) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/approve_payment.php on line 11
+[08-Nov-2020 15:43:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[08-Nov-2020 20:38:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[12-Nov-2020 13:45:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 45
+[12-Nov-2020 15:37:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `ksvftpur_intl_conference`.`participant`.`journal_id` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(62): db->execute('INSERT INTO par...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_co_author.php(14): journal->add_co_author('Olagoke-Salami', 'Sekinat', '')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[12-Nov-2020 15:37:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `ksvftpur_intl_conference`.`participant`.`journal_id` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(62): db->execute('INSERT INTO par...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_co_author.php(14): journal->add_co_author('Olagoke-Salami', 'Sekinat', '')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[12-Nov-2020 15:37:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `ksvftpur_intl_conference`.`participant`.`journal_id` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/journal.class.php(62): db->execute('INSERT INTO par...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_co_author.php(14): journal->add_co_author('Olagoke-Salami', 'Sekinat', '')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[12-Nov-2020 22:26:50 UTC] PHP Notice:  Undefined variable: arr_data in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 22
+[12-Nov-2020 22:26:50 UTC] PHP Notice:  Undefined variable: arr_data in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 22
+[12-Nov-2020 22:26:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php:22) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/bulk-upload.php on line 24
+[09-Feb-2021 09:55:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'date_created' doesn't have a default value in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/participant.class.php(18): db->execute('INSERT INTO `pa...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/massive_participant_upload.php(14): participant->massive__participant_upload('fatona', 'lasisi alao')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[09-Feb-2021 09:56:14 UTC] PHP Notice:  Undefined index: participant_id in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/massive_participant_upload.php on line 11
+[09-Feb-2021 09:56:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'date_created' doesn't have a default value in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/participant.class.php(18): db->execute('INSERT INTO `pa...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/massive_participant_upload.php(17): participant->massive__participant_upload('fatona', 'lasisi alao')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[09-Feb-2021 09:57:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'date_created' doesn't have a default value in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/participant.class.php(18): db->execute('INSERT INTO `pa...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/massive_participant_upload.php(16): participant->massive__participant_upload('fatona', 'lasisi alao')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[09-Feb-2021 09:58:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:37
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(37): PDO->prepare('INSERT INTO `pa...')
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/participant.class.php(18): db->execute('INSERT INTO `pa...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/massive_participant_upload.php(16): participant->massive__participant_upload('fatona', 'lasisi alao')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 37
+[10-Feb-2021 08:59:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/login.php:11) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/login.php on line 20
+[07-Aug-2021 08:49:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 08:50:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 08:50:48 UTC] PHP Notice:  Undefined index: paper_id in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update-paper.php on line 9
+[07-Aug-2021 08:50:48 UTC] PHP Notice:  Undefined index: title in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update-paper.php on line 9
+[07-Aug-2021 08:50:48 UTC] PHP Notice:  Undefined index: abstract in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update-paper.php on line 9
+[07-Aug-2021 08:50:48 UTC] PHP Notice:  Undefined index: authors in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update-paper.php on line 9
+[07-Aug-2021 08:50:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update-paper.php:9) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/update-paper.php on line 11
+[07-Aug-2021 08:57:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Aug-2021 08:58:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_sponsor.php on line 28
+[07-Aug-2021 09:15:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:15:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:15:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:15:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:16:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:16:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:17:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/add_speaker.php on line 27
+[07-Aug-2021 09:18:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:19:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:19:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:19:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:19:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:19:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:19:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ksvftpur/public_html/fpi2ndinterconf/classes/validate.class.php:79) in /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/upload-paper.php on line 28
+[07-Aug-2021 09:25:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9D\xA4\xEF\xB8\x8F...' for column `ksvftpur_intl_conference`.`welcome_message`.`welcome` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/about.class.php(20): db->execute('UPDATE `welcome...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/welcome.php(16): about->update_welcome('&lt;meta charse...')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
+[07-Aug-2021 09:26:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9D\xA4\xEF\xB8\x8F...' for column `ksvftpur_intl_conference`.`welcome_message`.`welcome` at row 1 in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php:38
+Stack trace:
+#0 /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php(38): PDOStatement->execute(Array)
+#1 /home/ksvftpur/public_html/fpi2ndinterconf/classes/about.class.php(20): db->execute('UPDATE `welcome...', Array)
+#2 /home/ksvftpur/public_html/fpi2ndinterconf/admin/logic/welcome.php(16): about->update_welcome('&lt;p dir=&quot...')
+#3 {main}
+  thrown in /home/ksvftpur/public_html/fpi2ndinterconf/classes/db.class.php on line 38
